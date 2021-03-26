@@ -54,7 +54,7 @@ namespace Calculator
             this.delete = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonMC = new System.Windows.Forms.Button();
-            this.buttonMR = new System.Windows.Forms.Button();
+            this.buttonMS = new System.Windows.Forms.Button();
             this.buttonMplus = new System.Windows.Forms.Button();
             this.buttonMMinus = new System.Windows.Forms.Button();
             this.buttonM = new System.Windows.Forms.Button();
@@ -171,6 +171,7 @@ namespace Calculator
             this.percent.TabIndex = 8;
             this.percent.Text = "%";
             this.percent.UseVisualStyleBackColor = false;
+            this.percent.Click += new System.EventHandler(this.percent_Click);
             // 
             // num2
             // 
@@ -374,18 +375,18 @@ namespace Calculator
             this.buttonMC.UseVisualStyleBackColor = false;
             this.buttonMC.Click += new System.EventHandler(this.buttonMC_Click);
             // 
-            // buttonMR
+            // buttonMS
             // 
-            this.buttonMR.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonMR.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonMR.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonMR.Location = new System.Drawing.Point(121, 146);
-            this.buttonMR.Name = "buttonMR";
-            this.buttonMR.Size = new System.Drawing.Size(89, 64);
-            this.buttonMR.TabIndex = 28;
-            this.buttonMR.Text = "MR";
-            this.buttonMR.UseVisualStyleBackColor = false;
-            this.buttonMR.Click += new System.EventHandler(this.buttonMR_Click);
+            this.buttonMS.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonMS.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonMS.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonMS.Location = new System.Drawing.Point(121, 146);
+            this.buttonMS.Name = "buttonMS";
+            this.buttonMS.Size = new System.Drawing.Size(89, 64);
+            this.buttonMS.TabIndex = 28;
+            this.buttonMS.Text = "MS";
+            this.buttonMS.UseVisualStyleBackColor = false;
+            this.buttonMS.Click += new System.EventHandler(this.buttonMR_Click);
             // 
             // buttonMplus
             // 
@@ -432,9 +433,9 @@ namespace Calculator
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox1.Size = new System.Drawing.Size(519, 120);
             this.textBox1.TabIndex = 32;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -455,7 +456,7 @@ namespace Calculator
             this.Controls.Add(this.buttonM);
             this.Controls.Add(this.buttonMMinus);
             this.Controls.Add(this.buttonMplus);
-            this.Controls.Add(this.buttonMR);
+            this.Controls.Add(this.buttonMS);
             this.Controls.Add(this.buttonMC);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.delete);
@@ -516,7 +517,7 @@ namespace Calculator
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buttonMC;
-        private System.Windows.Forms.Button buttonMR;
+        private System.Windows.Forms.Button buttonMS;
         private System.Windows.Forms.Button buttonMplus;
         private System.Windows.Forms.Button buttonMMinus;
         private System.Windows.Forms.Button buttonM;
